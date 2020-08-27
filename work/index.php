@@ -9,6 +9,7 @@
   $request = $client->getMessageFactory()->createRequest();
   $response = $client->getMessageFactory()->createResponse();
 
+  
   $url = 'https://www3.nhk.or.jp/news/catnew.html';
   $request->setUrl($url);
   $client->send($request,$response);
@@ -44,10 +45,10 @@
   mb_internal_encoding("UTF-8");
   if(mb_send_mail("xxbbxx825@gmail.com", "最新ニュース", $news))
   {
-    echo "メール送信成功です";
+    echo "メールを送信しました";
   }
   else
   {
-    echo "メール送信失敗です";
+    echo "メール送信に失敗しました";
   }
 ?>
